@@ -99,5 +99,5 @@
  - Mestre do improviso
  - Mundo sustentável
 ### Visionário
--Visão do futuro
+- Visão do futuro
 - Agente de mudanças
