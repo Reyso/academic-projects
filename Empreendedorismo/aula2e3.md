@@ -49,55 +49,55 @@
 - Sem CNPJ
 
 ### Cooperado 
-> se associam para suprir a demanda Local
+- se associam para suprir a demanda Local
 
 ### Franquia
-> Inicia a partir de uma marca jpa desenvolvida
+- Inicia a partir de uma marca jpa desenvolvida
 
 ### Empreendedor Social
-> Sem fins lucrativos
+- Sem fins lucrativos
 
 ### Coorporativo
-> Funcionarios que trazem ideias e executam projetos para melhoria da empresa
+- Funcionarios que trazem ideias e executam projetos para melhoria da empresa
 
 ### Público
-> Buscam melhorar o serviço a população
+- Buscam melhorar o serviço a população
 
 ### Empreendedor de Conhecimento
-> Buscam Aprimorar seu conhecimento (Atleta, advogados,médicos,músicos) / profissional e paixão
+- Buscam Aprimorar seu conhecimento (Atleta, advogados,médicos,músicos) / profissional e paixão
 
 ### Negocio Prórpio
-> Busca da autonomia 
+- Busca da autonomia 
 
 ### Digital/ Inovador
-> Plataforma como modelo de negócio, tecnologia, startups, usam tecnologia como forma de empreender e escalar um negócio
+- Plataforma como modelo de negócio, tecnologia, startups, usam tecnologia como forma de empreender e escalar um negócio
 
 ## Habilidade e podedres dos empreendedores
 
 ### Bom de papo/ Concencimento
-	> Vendedor
+- Vendedor
 ### Detetive
-	> encontra informações e dicas, descobre o jeito de lidar com um obstáculo
+- encontra informações e dicas, descobre o jeito de lidar com um obstáculo
 ### Inventor
-	> Tem ideias Criativas, inovadores, faro de sucesso
+- Tem ideias Criativas, inovadores, faro de sucesso
 ### Joga para o time
-	> Se acredita na idadea, numa equipe... vai até o fim
+- Se acredita na idadea, numa equipe... vai até o fim
 ### Líder
- 	> Insipira e atrai pessoas para o seu time
- 	> Capitão
+ - Insipira e atrai pessoas para o seu time
+ - Capitão
 ### Mão na passa
- 	> Primeiro a começar
- 	> Tudo ou nada
- 	> Faz aconteer
+ - Primeiro a começar
+ - Tudo ou nada
+ - Faz aconteer
 ### Plano Infalível
- 	> Faz um bom plano
- 	> Usa os recursos de forma inteligente
+ - Faz um bom plano
+ - Usa os recursos de forma inteligente
 ### Se vira Sozinho
- 	> Independente
- 	> Sabe o que quer
+ - Independente
+ - Sabe o que quer
 ### Transformador
- 	> Mestre do improviso
- 	> Mundo sustentável
+ - Mestre do improviso
+ - Mundo sustentável
 ### Visionário
-> Visão do futuro
-	> Agente de mudanças
+-Visão do futuro
+- Agente de mudanças
