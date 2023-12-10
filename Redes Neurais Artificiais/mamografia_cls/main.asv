@@ -1,0 +1,20 @@
+%x = X';
+%y = y';
+
+
+% Definindo a divisão dos dados (porcentagens)
+train_percentage = 60;
+val_percentage = 20;
+test_percentage = 20;
+
+[trainInd, valInd, testInd] = dividerand(size(x, 2), train_percentage/100, val_percentage/100, test_percentage/100);
+
+% Separando os dados
+X_train = x(:, trainInd);
+y_train = y(:, trainInd);
+
+ = x(:, valInd);
+val_targets = y(:, valInd);
+
+test_inputs = x(:, testInd);
+test_targets = y(:, testInd);
