@@ -3,7 +3,7 @@
 
 ### Artigo : PREDIÇÃO DE SUCESSO ACADÊMICO USANDO REDE PERCEPTRON MULTICAMADAS
 
-
+Foi utilizado uma MLP para classificação
 
 base de dados: https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success
 
