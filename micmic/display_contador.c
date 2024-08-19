@@ -1,0 +1,25 @@
+ #define F_CPU 8000000UL
+ #include<avr/io.h>
+ #include<util/delay.h>
+ const unsigned char Tabela[] = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02,
+ 0x78, 0x00, 0x18, 0x08, 0x03, 0x46, 0x21, 0x06, 0x0E}; //Anodo comum
+ #define tst_bit(Y,bit_x) (Y&(1<<bit_x)) //testa o bit x de Y
+ #define BOTAO PB2//define PB2 com o nome de BOTAO
+ 
+int main()
+{unsigned char contador =0;//Contador
+	DDRB = 0x00; //PB -entrada
+	PORTB = 1<<BOTAO; //Habilita o pull-updo BOTAO
+	DDRD = 0x7F; //PORTD como saída (display)
+	PORTD = 0x40; //Mostra 0 no display
+	UCSR0B= 0x00; //PD0 e PD1 como I/O genérico
+	while(1) //Laço infinito
+	{ if(!tst_bit(PINB,BOTAO)) //Se botão pressionado, conta
+		{contador++; //Incrementa contador
+			if(contador == 16) contador = 0;//Testa valor máximo
+			PORTD= Tabela[contador]; //PORTD conforme contador
+			_delay_ms(10); //Delay
+			while(!tst_bit(PINB,BOTAO)); //Aguarda soltar o botão
+		}
+	}
+}
