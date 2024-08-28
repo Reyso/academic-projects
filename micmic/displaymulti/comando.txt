@@ -1,0 +1,5 @@
+inserir chave no pino PB2
+
+quando pressionar e soltar a  chave, mudaro sentido da contagem.
+
+enquanto a chave estiver pressionada, a contagem deve permanecer parada
