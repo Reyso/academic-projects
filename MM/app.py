@@ -111,7 +111,7 @@ def expressao_solucao(matrix, pivot_columns, free_variables):
     return sol_expressao
 
 def main():
-    st.title("Eliminação Gaussiana - Sistema Linear")
+    st.title("Calculadora de Sistemas de Equações Lineares")
     st.subheader("Por :blue[André Jordan] e :blue[Reyso Teixeira] :sunglasses:")
     st.write("Forneça os dados do sistema linear.")
     
