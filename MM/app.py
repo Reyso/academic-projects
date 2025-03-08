@@ -61,9 +61,9 @@ def canonica_matriz(matrix):
 
 def verificar_solucao(matrix):
     """
-    Determina se o sistema possui solução única ou infinitas soluções.
+    Determina se o sistema possui solução única, infinitas soluções ou é inconsistente.
     Retorna:
-      - status: 'solucao_unica' ou 'infinitas'
+      - status: 'solucao_unica', 'infinitas' ou 'inconsistente'
       - solução (apenas se única)
       - colunas com pivôs
       - conjunto de variáveis livres
@@ -76,6 +76,8 @@ def verificar_solucao(matrix):
         nonzero = np.where(np.abs(matrix[row, :-1]) > 1e-8)[0]
         if nonzero.size > 0:
             pivot_columns.append(nonzero[0])
+        elif np.abs(matrix[row, -1]) > 1e-8:  # Se b ≠ 0 e todos coeficientes são 0
+            return 'inconsistente', None, None, None
     
     free_variables = set(range(num_vars)) - set(pivot_columns)
     
@@ -90,13 +92,11 @@ def verificar_solucao(matrix):
 def expressao_solucao(matrix, pivot_columns, free_variables):
     """
     Expressa a solução geral do sistema em termos das variáveis livres.
-    Cada variável livre é representada por um parâmetro t com o índice da variável.
     """
     rows, cols = matrix.shape
     num_vars = cols - 1
     sol_expressao = [None] * num_vars
     
-    # Expressa as variáveis básicas em função das variáveis livres
     for i, col in enumerate(pivot_columns):
         expr = f"{matrix[i, -1]:.2f}"
         for j in free_variables:
@@ -105,7 +105,6 @@ def expressao_solucao(matrix, pivot_columns, free_variables):
                 expr += f" {'+' if coef > 0 else '-'} {abs(coef):.2f}t{j}"
         sol_expressao[col] = expr
     
-    # Para as variáveis livres, a solução é o parâmetro t correspondente
     for var in free_variables:
         sol_expressao[var] = f"t{var}"
     
@@ -171,12 +170,14 @@ def main():
             
             # Verifica a solução e exibe os resultados
             status, sol, pivot_columns, free_variables = verificar_solucao(canonica)
-            if status == 'solucao_unica':
+            
+            if status == 'inconsistente':
+                st.subheader("O sistema é inconsistente e não possui solução.")
+            elif status == 'solucao_unica':
                 st.subheader("O sistema possui solução única:")
                 st.write(sol)
             else:
                 st.subheader("O sistema possui infinitas soluções.")
-                st.write(f"Quantidade de variáveis livres: {len(free_variables)}")
                 sol_expressao = expressao_solucao(canonica, pivot_columns, free_variables)
                 st.subheader("Solução geral:")
                 for i, expr in enumerate(sol_expressao):
