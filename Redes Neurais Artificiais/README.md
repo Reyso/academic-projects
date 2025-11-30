@@ -1,5 +1,5 @@
 # Dataset Attributes
-##Column name Description
+## Column name Description
 - Marital status The marital status of the student. (Categorical)
 - Application mode The method of application used by the student. (Categorical)
 - Application order The order in which the student applied. (Numerical)
